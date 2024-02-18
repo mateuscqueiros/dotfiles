@@ -1,4 +1,5 @@
 local telescope_builtin = require("telescope.builtin")
+local commands = require("mateus.commands")
 
 local mark = require("harpoon.mark")
 local ui = require("harpoon.ui")
@@ -30,9 +31,21 @@ keymap.set("n", "<leader>O", "O<Esc>")
 keymap.set("n", "<A-v>", "<C-v>")
 
 -- Telescope
-keymap.set("n", "<leader>ff", telescope_builtin.fd)
-keymap.set("n", "<leader>fg", telescope_builtin.live_grep)
-keymap.set("n", "<leader>fb", telescope_builtin.buffers)
+keymap.set(
+  "n",
+  "<leader>ff",
+  function() telescope_builtin.fd(commands.no_preview()) end
+)
+keymap.set(
+  "n",
+  "<leader>fg",
+  function() telescope_builtin.live_grep(commands.no_preview()) end
+)
+keymap.set(
+  "n",
+  "<leader>fb",
+  function() telescope_builtin.buffers(commands.no_preview()) end
+)
 keymap.set("n", "<leader>fh", telescope_builtin.help_tags)
 
 -- Harpoon
