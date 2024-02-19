@@ -1,4 +1,7 @@
-lazygit
-github-copilot
-go
+*
 
+!nvim
+!fish
+!other
+!zsh
+!tmux
