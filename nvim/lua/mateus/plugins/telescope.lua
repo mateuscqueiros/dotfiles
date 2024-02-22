@@ -1,20 +1,22 @@
 return {
   "nvim-telescope/telescope.nvim",
-  opts = {
-    defaults = {
-      file_ignore_patterns = {
-        "^node_modules/",
-        ".stylua.toml",
-        "package-lock.json",
-        "yarn.lock",
-        "^lazy-lock.json",
-      },
-    },
-  },
   tag = "0.1.5",
-  dependencies = {
-    "junegunn/fzf",
-    "nvim-lua/plenary.nvim",
-    "BurntSushi/ripgrep",
-  },
+  dependencies = { "nvim-lua/plenary.nvim" },
+  config = function()
+    local colors = require("solarized-osaka.colors")
+    local TelescopeColor = {
+      TelescopeSelection = {
+        fg = colors.default.yellow500,
+        bold = true,
+      },
+      TelescopeBorder = {
+        bg = colors.default.yellow500,
+        fg = colors.default.yellow500,
+      },
+    }
+
+    for hl, col in pairs(TelescopeColor) do
+      vim.api.nvim_set_hl(0, hl, col)
+    end
+  end,
 }
