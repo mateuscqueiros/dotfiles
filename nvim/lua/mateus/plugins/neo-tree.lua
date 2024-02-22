@@ -34,9 +34,7 @@ return {
     },
     default_component_configs = {
       indent = {
-        indent_size = 3,
-        indent_marker = "",
-        last_indent_marker = "",
+        with_markers = false,
       },
       modified = {
         symbol = "+",
