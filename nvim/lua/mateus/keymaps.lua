@@ -1,8 +1,6 @@
 local telescope_builtin = require("telescope.builtin")
 local commands = require("mateus.commands")
-
-local mark = require("harpoon.mark")
-local ui = require("harpoon.ui")
+local harpoon = require("harpoon")
 
 local keymap = vim.keymap
 local buf = vim.lsp.buf
@@ -47,6 +45,7 @@ keymap.set("n", "<leader>O", "O<Esc>")
 keymap.set("n", "te", ":tabedit")
 keymap.set("n", "<tab>", ":tabnext<Return>", opts)
 keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
+
 -- Split window
 keymap.set("n", "ss", ":split<Return>", opts)
 keymap.set("n", "sv", ":vsplit<Return>", opts)
@@ -79,20 +78,13 @@ keymap.set(
 )
 keymap.set("n", "<leader>fh", telescope_builtin.help_tags)
 
--- Harpoon
-keymap.set("n", "<leader>A", mark.add_file)
-keymap.set("n", "<leader>a", ui.toggle_quick_menu)
-keymap.set("n", "<leader>1", function() ui.nav_file(1) end)
-keymap.set("n", "<leader>2", function() ui.nav_file(2) end)
-keymap.set("n", "<leader>3", function() ui.nav_file(3) end)
-keymap.set("n", "<leader>4", function() ui.nav_file(4) end)
-
-keymap.set("n", "<leader>t1", function() ui.nav_file(4) end)
-
 -- Neo tree
 keymap.set("n", "<C-b>", "<cmd>Neotree toggle<CR>")
 keymap.set("n", "<leader>b", "<cmd>Neotree toggle show buffers right<cr>")
 keymap.set("n", "<leader>gs", "<cmd>Neotree float git_status<cr>")
+
+-- Neorg
+keymap.set("n", "<leader>ji", "<cmd>Neorg<CR>")
 
 -- LSP Config
 local on_attach = function()
@@ -113,7 +105,6 @@ local cmp_mapping = function(cmp)
     ["<C-j>"] = cmp.mapping.select_next_item(),
     ["<C-k>"] = cmp.mapping.select_prev_item(),
     ["<C-o>"] = cmp.mapping.complete(),
-    ["<C-i>"] = cmp.mapping.complete(),
     ["<C-v>"] = cmp.mapping.abort(),
     ["<Tab>"] = cmp.mapping.confirm({ select = true }),
   }
