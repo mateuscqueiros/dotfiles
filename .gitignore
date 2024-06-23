@@ -1,0 +1,11 @@
+/*
+
+!.gitmodules
+!.gitignore
+
+!tmux/
+tmux/plugins
+
+!zsh/
+!nvim/
+!other/
