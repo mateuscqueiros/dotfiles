@@ -22,6 +22,8 @@ source ~/.zshrc;
 
 sudo apt-get install tmux -y;
 
+tmux source ~/.config/tmux/tmux.conf
+
 sudo apt install ripgrep -y;
 sudo apt install fd-find -y;
 
