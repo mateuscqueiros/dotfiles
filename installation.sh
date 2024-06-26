@@ -10,7 +10,7 @@ sudo apt install zsh -y;
 
 chsh -s $(which zsh)
 
-source ~/.bashrc
+source ~/.bashrc;
 
 sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)" -y;
 
