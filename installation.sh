@@ -31,7 +31,6 @@ sudo mv nvim.appimage /usr/local/bin/nvim;
 
 git clone https://github.com/mateuscqueiros/nvim.config ~/.config/nvim
 
-nvim ~/.config/nvim;
-
 zsh;
 
+nvim ~/.config/nvim;
