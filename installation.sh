@@ -8,9 +8,13 @@ git clone https://github.com/mateuscqueiros/dotfiles ~/.config
 sudo apt update -y;
 sudo apt install zsh -y;
 
+echo "HERE ===================================================================================================================================="
+
 chsh -s $(which zsh)
 
-source ~/.bashrc;
+echo "HERE ===================================================================================================================================="
+
+shutdown -r now;
 
 sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)" -y;
 
@@ -22,16 +26,12 @@ git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$H
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-source ~/.zshrc
-
 # TMUX
 sudo apt-get install tmux -y;
 
 ln -s ~/.config/tmux/.tmux.conf ~/.tmux.conf;
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-source ~/.zshrc;
 
 # Neovim
 sudo apt install ripgrep -y;
@@ -44,3 +44,5 @@ sudo mv nvim.appimage /usr/local/bin/nvim;
 git clone https://github.com/mateuscqueiros/nvim.config ~/.config/nvim;
 
 zsh;
+
+source ~/.zshrc;
