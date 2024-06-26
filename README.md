@@ -52,21 +52,7 @@ chmod -R u+x ~/install-config
  echo "0" | ./install.sh
 ```
 
-```bash
-chmod u+x s.sh
-
-echo "0" | ./s.sh
-
-enter
-:qa
-nvim .
-:colorscheme rose-pine
-:qa
-
-zsh;
-```
-
-After that open Neovim and let Lazy install the plugins. Set a colorscheme through `:colorscheme rose-pine`. After all download finish, quit Neovim and reopen it.
+After that, restart your machine. Open Neovim and let Lazy install the plugins. Once possible, open a file and let Mason install the LSPs. Set a colorscheme through `:colorscheme rose-pine`. After all download finish, quit Neovim and reopen it. You are done!
 
 ## Step by step
 
