@@ -32,9 +32,10 @@ A Bash Script is available to automatize the steps below for you!
 How to use:
 
 ```bash
-# Make sure you have tar installed
+# Make sure you have tar and curl installed
 sudo apt update
 sudo apt install tar
+sudo apt install curl
 
 # Create a installation directory
 mkdir ~/install-config
