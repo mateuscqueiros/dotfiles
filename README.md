@@ -58,6 +58,8 @@ nvim .
 zsh;
 ```
 
+After that open Neovim and let Lazy install the plugins. Set a colorscheme through `:colorscheme rose-pine`. After all download finish, quit Neovim and reopen it.
+
 ## Step by step
 
 This config is optimal for Debian or Ubuntu. My main workspace is Debian WSL. Make sure to not just blindly run the commands. Read the comments, as they add some important instructions and references.
