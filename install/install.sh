@@ -87,7 +87,3 @@ else
     printf "Failed to alted default shell\n"
     exit 1
 fi
-
-zsh;
-
-source ~/.zshrc;
