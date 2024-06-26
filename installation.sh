@@ -31,7 +31,7 @@ sudo apt-get install tmux -y;
 
 ln -s ~/.config/tmux/.tmux.conf ~/.tmux.conf;
 
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm;
 
 # Neovim
 sudo apt install ripgrep -y;
@@ -43,6 +43,24 @@ sudo mv nvim.appimage /usr/local/bin/nvim;
 
 git clone https://github.com/mateuscqueiros/nvim.config ~/.config/nvim;
 
+# Set default shell
+new_shell=$(which zsh);
+
+if ! grep -q "$new_shell" /etc/shells; then
+    echo "O shell $new_shell não está listado em /etc/shells"
+    exit 1
+fi
+
+sudo chsh -s "$new_shell" "$USER";
+
+if [ $? -eq 0 ]; then
+    echo "O shell padrão foi alterado para $new_shell com sucesso."
+else
+    echo "Falha ao alterar o shell padrão."
+    exit 1
+fi
+
 zsh;
 
 source ~/.zshrc;
+
