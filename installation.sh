@@ -8,7 +8,6 @@ git clone https://github.com/mateuscqueiros/dotfiles ~/.config
 sudo apt update -y;
 sudo apt install zsh -y;
 
-exit; exit;
 
 chsh -s $(which zsh)
 
@@ -30,6 +29,8 @@ sudo apt-get install tmux -y;
 ln -s ~/.config/tmux/.tmux.conf ~/.tmux.conf;
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+exit; exit;
 
 source ~/.zshrc;
 
