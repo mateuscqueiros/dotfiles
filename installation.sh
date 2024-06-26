@@ -17,15 +17,16 @@ rm -rf ~/.zshrc;
 
 ln -s ~/.config/zsh/.zshrc ~/.zshrc;
 
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-zsh;
-
 sudo apt-get install tmux -y;
 
-source ~/.zshrc;
+ln -s ~/.config/tmux/.tmux.conf ~/.tmux.conf;
 
-tmux source ~/.config/tmux/tmux.conf
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+exit;
+exit;
+
+source ~/.zshrc;
 
 sudo apt install ripgrep -y;
 sudo apt install fd-find -y;
