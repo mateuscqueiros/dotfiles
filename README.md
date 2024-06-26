@@ -40,10 +40,8 @@ sudo apt install tar
 mkdir ~/install-config
 cd ~/install-config
 
-# Download the installation script
+# Download and extract the installation folder
 curl https://codeload.github.com/mateuscqueiros/dotfiles/tar.gz/master | \tar -xz --strip=2 dotfiles-master/install
-# OR
-wget -q https://raw.githubusercontent.com/mateuscqueiros/dotfiles/master/installation.sh
 
 # Give exec permission to folder
 chmod -R u+x ~/install-config
@@ -52,7 +50,7 @@ chmod -R u+x ~/install-config
  echo "0" | ./install.sh
 ```
 
-After that, restart your machine. Open Neovim and let Lazy install the plugins. Once possible, open a file and let Mason install the LSPs. Set a colorscheme through `:colorscheme rose-pine`. After all download finish, quit Neovim and reopen it. You are done!
+After that, restart your machine. Open Neovim and let Lazy install the plugins. Once possible, open a file and let Mason install the LSPs. Set a colorscheme through `:colorscheme rose-pine`. After all downloads finish, quit Neovim and reopen it. You are done!
 
 ## Step by step
 
@@ -121,7 +119,7 @@ Source `~/.zshrc`:
 source ~/.zshrc
 ```
 
-If you have not done it yet, set up SSH keys so Zsh can start the ssh-agent for you.
+If you have not done it yet, set up SSH keys so Zsh can start the ssh-agent when you logiN.
 
 If the content of `~/.config/zsh/.zshrc` was overwritten by Oh My Zsh at some point then copy and paste it from this repository.
 
@@ -129,6 +127,10 @@ If the content of `~/.config/zsh/.zshrc` was overwritten by Oh My Zsh at some po
 
 ```bash
 sudo apt-get install tmux
+
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm;
+
+ln -s ~/.config/tmux/.tmux.conf ~/.tmux.conf
 ```
 
 ### Neovim
