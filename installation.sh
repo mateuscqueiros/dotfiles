@@ -1,22 +1,25 @@
 #!/bin/sh
 
-sudo apt-get install git -y;
+sudo apt-get -qq -y update;
+
+printf "Updated apt-get\n";
+
+sudo apt-get -qq install git;
+
+printf "Installed git\n";
 
 git clone https://github.com/mateuscqueiros/dotfiles ~/.config
 
 # ZSH
-sudo apt update -y;
-sudo apt install zsh -y;
+sudo apt-get -qq -y install zsh;
 
-echo "HERE ===================================================================================================================================="
-
-echo $password | chsh -s $(which zsh);
-
-echo "HERE ===================================================================================================================================="
+printf "Installed Zsh\n";
 
 shutdown -r now;
 
-sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)" -y;
+sh -c "$(wget -q https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)";
+
+printf "Installed Oh My Zsh\n";
 
 rm -rf ~/.zshrc;
 
@@ -26,20 +29,31 @@ git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$H
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
+printf "Installed Zsh Plugins\n";
+
 # TMUX
-sudo apt-get install tmux -y;
+sudo apt-get -qq -y install tmux;
 
 ln -s ~/.config/tmux/.tmux.conf ~/.tmux.conf;
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm;
 
+printf "Installed Tmux";
+
 # Neovim
-sudo apt install ripgrep -y;
-sudo apt install fd-find -y;
+sudo apt-get -qq -y install ripgrep;
+
+printf "Installed ripgrep\n";
+
+sudo apt-get -qq -y install fd-find;
+
+printf "Installed fd-find\n";
 
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage;
 chmod u+x nvim.appimage;
 sudo mv nvim.appimage /usr/local/bin/nvim;
+
+printf "Installed Neovim\n";
 
 git clone https://github.com/mateuscqueiros/nvim.config ~/.config/nvim;
 
@@ -47,20 +61,19 @@ git clone https://github.com/mateuscqueiros/nvim.config ~/.config/nvim;
 new_shell=$(which zsh);
 
 if ! grep -q "$new_shell" /etc/shells; then
-    echo "O shell $new_shell não está listado em /etc/shells"
+    printf "O shell $new_shell não está listado em /etc/shells\n"
     exit 1
 fi
 
 sudo chsh -s "$new_shell" "$USER";
 
 if [ $? -eq 0 ]; then
-    echo "O shell padrão foi alterado para $new_shell com sucesso."
+    printf "Default shell was altered sucessfully.\n"
 else
-    echo "Falha ao alterar o shell padrão."
+    printf "Failed to alted default shell\n"
     exit 1
 fi
 
 zsh;
 
 source ~/.zshrc;
-
