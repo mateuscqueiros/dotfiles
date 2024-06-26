@@ -32,16 +32,24 @@ A Bash Script is available to automatize the steps below for you!
 How to use:
 
 ```bash
+# Make sure you have tar installed
+sudo apt update
+sudo apt install tar
+
+# Create a installation directory
+mkdir ~/install-config
+cd ~/install-config
+
 # Download the installation script
-curl -LO https://raw.githubusercontent.com/mateuscqueiros/dotfiles/master/installation.sh
+curl https://codeload.github.com/mateuscqueiros/dotfiles/tar.gz/master | \tar -xz --strip=2 dotfiles-master/install
 # OR
 wget -q https://raw.githubusercontent.com/mateuscqueiros/dotfiles/master/installation.sh
 
-# Give exec permission
-chmod -R u+x ./installation
+# Give exec permission to folder
+chmod -R u+x ~/install-config
 
 # Run the script
- echo "0" | ./installation/install.sh
+ echo "0" | ./install.sh
 ```
 
 ```bash

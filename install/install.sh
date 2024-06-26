@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo "Initiating download..."
+
 sudo apt-get -qq -y update;
 
 printf "Updated apt-get\n";
