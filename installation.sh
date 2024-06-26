@@ -6,6 +6,9 @@ git clone https://github.com/mateuscqueiros/dotfiles ~/.config
 
 sudo apt update -y;
 sudo apt install zsh -y;
+
+chsh -s $(which zsh)
+
 zsh;
 
 sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)" -y;
