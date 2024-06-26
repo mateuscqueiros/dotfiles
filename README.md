@@ -38,10 +38,10 @@ curl -LO https://raw.githubusercontent.com/mateuscqueiros/dotfiles/master/instal
 wget -q https://raw.githubusercontent.com/mateuscqueiros/dotfiles/master/installation.sh
 
 # Give exec permission
-chmod u+x installation.sh
+chmod -R u+x ./installation
 
 # Run the script
- echo "0" | ./installation.sh
+ echo "0" | ./installation/install.sh
 ```
 
 ```bash
