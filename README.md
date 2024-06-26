@@ -2,6 +2,8 @@
 
 **[BETA README DO NOT TRY TO INSTALL THROUGH THE STEPS BELOW]**
 
+![react demo](./screenshots/react-demo.png)
+
 This is my configuration for a Neovim setup, mainly focused on React and Web development.
 
 ## Overview
@@ -31,7 +33,7 @@ How to use:
 
 ```bash
 # Download the installation script
-curl https://raw.githubusercontent.com/mateuscqueiros/dotfiles/master/installation.sh
+curl -LO https://raw.githubusercontent.com/mateuscqueiros/dotfiles/master/installation.sh
 # OR
 wget -q https://raw.githubusercontent.com/mateuscqueiros/dotfiles/master/installation.sh
 
