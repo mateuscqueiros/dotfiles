@@ -19,6 +19,22 @@
             "command": 
             {
                 "action": "switchToTab",
+                "index": 0
+            },
+            "keys": "ctrl+shift+z"
+        },
+        {
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "keys": "ctrl+c"
+        },
+        {
+            "command": 
+            {
+                "action": "switchToTab",
                 "index": 7
             },
             "keys": "ctrl+shift+8"
@@ -80,20 +96,8 @@
             "keys": "ctrl+shift+v"
         },
         {
-            "command": 
-            {
-                "action": "switchToTab",
-                "index": 0
-            },
-            "keys": "ctrl+shift+z"
-        },
-        {
-            "command": 
-            {
-                "action": "copy",
-                "singleLine": false
-            },
-            "keys": "ctrl+c"
+            "command": "find",
+            "keys": "ctrl+shift+f"
         },
         {
             "command": 
@@ -103,10 +107,6 @@
                 "splitMode": "duplicate"
             },
             "keys": "alt+shift+d"
-        },
-        {
-            "command": "find",
-            "keys": "ctrl+shift+f"
         },
         {
             "command": 
@@ -128,17 +128,17 @@
             "command": 
             {
                 "action": "switchToTab",
-                "index": 5
+                "index": 6
             },
-            "keys": "ctrl+shift+6"
+            "keys": "ctrl+shift+7"
         },
         {
             "command": 
             {
                 "action": "switchToTab",
-                "index": 6
+                "index": 5
             },
-            "keys": "ctrl+shift+7"
+            "keys": "ctrl+shift+6"
         }
     ],
     "copyFormatting": "none",
@@ -155,7 +155,7 @@
         "defaults": 
         {
             "backgroundImage": "C:\\Users\\Mateus\\Downloads\\download.jpeg",
-            "backgroundImageOpacity": 0.04,
+            "backgroundImageOpacity": 0.05,
             "colorScheme": "rose-pine",
             "experimental.retroTerminalEffect": false,
             "font": 
