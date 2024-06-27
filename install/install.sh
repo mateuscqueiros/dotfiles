@@ -22,10 +22,10 @@ fi
 
 printf "Installed git\n";
 
-sudo add-apt-repository universe;
-sudo apt install libfuse2;
+sudo add-apt-repository -qq universe;
+sudo apt -qq install libfuse2;
 
-git clone https://github.com/mateuscqueiros/dotfiles ~/.config
+git clone --quiet https://github.com/mateuscqueiros/dotfiles ~/.config
 
 # ZSH
 sudo apt -qq -y install zsh;
@@ -42,9 +42,9 @@ rm -rf ~/.zshrc;
 
 ln -s ~/.config/zsh/.zshrc ~/.zshrc;
 
-git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone --quiet --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+git clone --quiet https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone --quiet https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 printf "Installed Zsh Plugins\n";
 
@@ -53,7 +53,7 @@ sudo apt -qq -y install tmux;
 
 ln -s ~/.config/tmux/.tmux.conf ~/.tmux.conf;
 
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm;
+git clone --quiet https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm;
 
 printf "Installed Tmux";
 
@@ -72,7 +72,7 @@ sudo mv nvim.appimage /usr/local/bin/nvim;
 
 printf "Installed Neovim\n";
 
-git clone https://github.com/mateuscqueiros/nvim.config ~/.config/nvim;
+git clone --quiet https://github.com/mateuscqueiros/nvim.config ~/.config/nvim;
 
 # Set default shell
 new_shell=$(which zsh);
