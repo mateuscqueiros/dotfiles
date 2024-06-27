@@ -57,12 +57,14 @@ After that, restart your machine. Open Neovim and let Lazy install the plugins. 
 
 This config is optimal for Debian or Ubuntu. My main workspace is Debian WSL. Make sure to not just blindly run the commands. Read the comments, as they add some important instructions and references.
 
-### Git
+### Pre-requisites
 
-Install git and clone this repo at your root.
+Install git, install FUSE and clone this repo at your root.
 
 ```bash
-sudo apt-get install git
+sudo apt install git
+sudo add-apt-repository universe
+sudo apt install libfuse2
 
 git clone https://github.com/mateuscqueiros/dotfiles ~/.config
 ```
@@ -127,7 +129,7 @@ If the content of `~/.config/zsh/.zshrc` was overwritten by Oh My Zsh at some po
 ### Tmux
 
 ```bash
-sudo apt-get install tmux
+sudo apt install tmux
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm;
 
@@ -139,8 +141,8 @@ ln -s ~/.config/tmux/.tmux.conf ~/.tmux.conf
 Install the following dependencies:
 
 ```bash
-sudo apt-get install ripgrep
-sudo apt-get install fd-find
+sudo apt install ripgrep
+sudo apt install fd-find
 ```
 
 Install Neovim from AppImage

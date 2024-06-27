@@ -2,9 +2,9 @@
 
 echo "Initiating download..."
 
-sudo apt-get -qq -y update;
+sudo apt -qq -y update;
 
-printf "Updated apt-get\n";
+printf "Updated apt\n";
 
 #!/bin/bash
 
@@ -25,7 +25,7 @@ printf "Installed git\n";
 git clone https://github.com/mateuscqueiros/dotfiles ~/.config
 
 # ZSH
-sudo apt-get -qq -y install zsh;
+sudo apt -qq -y install zsh;
 
 printf "Installed Zsh\n";
 
@@ -46,7 +46,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 printf "Installed Zsh Plugins\n";
 
 # TMUX
-sudo apt-get -qq -y install tmux;
+sudo apt -qq -y install tmux;
 
 ln -s ~/.config/tmux/.tmux.conf ~/.tmux.conf;
 
@@ -55,11 +55,11 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm;
 printf "Installed Tmux";
 
 # Neovim
-sudo apt-get -qq -y install ripgrep;
+sudo apt -qq -y install ripgrep;
 
 printf "Installed ripgrep\n";
 
-sudo apt-get -qq -y install fd-find;
+sudo apt -qq -y install fd-find;
 
 printf "Installed fd-find\n";
 
