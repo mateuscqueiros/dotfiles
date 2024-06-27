@@ -22,6 +22,9 @@ fi
 
 printf "Installed git\n";
 
+sudo add-apt-repository universe;
+sudo apt install libfuse2;
+
 git clone https://github.com/mateuscqueiros/dotfiles ~/.config
 
 # ZSH
