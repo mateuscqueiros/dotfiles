@@ -22,7 +22,7 @@ fi
 
 printf "Installed git\n";
 
-sudo add-apt-repository -qq universe;
+sudo add-apt-repository universe;
 sudo apt -qq install libfuse2;
 
 git clone --quiet https://github.com/mateuscqueiros/dotfiles ~/.config
@@ -34,7 +34,7 @@ printf "Installed Zsh\n";
 
 shutdown -r now;
 
-sh -c "$(wget -q https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)";
+sh -c "$(wget -q https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)" >/dev/null;
 
 printf "Installed Oh My Zsh\n";
 
