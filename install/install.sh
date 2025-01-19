@@ -10,13 +10,22 @@ printf "Updated apt\n";
 
 # Path to the install_git.sh script
 INSTALL_GIT="./git.sh"
+INSTALL_NODE="./node.sh"
 
 # Check if the script exists and is executable
 if [ -f "$INSTALL_GIT" ] && [ -x "$INSTALL_GIT" ]; then
-    echo "Executing install_git.sh..."
+    echo "Executing install git.sh..."
     $INSTALL_GIT
 else
     echo "git.sh not found or not executable."
+    exit 1
+fi
+
+if [ -f "$INSTALL_NODE" ] && [ -x "$INSTALL_NODE" ]; then
+    echo "Executing install node.sh..."
+    $INSTALL_NODE
+else
+    echo "node.sh not found or not executable."
     exit 1
 fi
 
