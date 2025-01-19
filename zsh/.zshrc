@@ -51,5 +51,3 @@ esac
 
 # Go
 export PATH=$PATH:/usr/local/go/bin
-
-ssh-add ~/.ssh/id_ed25519
