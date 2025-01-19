@@ -58,6 +58,7 @@ ssh-keygen -t ed25519 -C "mateuscqueiros@gmail.com" && eval "$(ssh-agent -s)" &&
 Copy the public key and add it to [your Github account](https://github.com/settings/keys). Test the connection.
 ```bash
 cat ~/.ssh/id_ed25519.pub
+ssh-add ~/.ssh/id_ed25519
 ssh -T git@github.com
 ```
 
