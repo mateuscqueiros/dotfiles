@@ -29,18 +29,29 @@ A Bash Script is available to automatize the steps below for you!
 
 How to use:
 
+Make sure you have tar and curl installed
 ```bash
-# Make sure you have tar and curl installed
 sudo apt update && sudo apt install tar curl
+```
 
-# Create a installation directory
+Create a installation directory
+```bash
 mkdir ~/install-config && cd ~/install-config
+```
 
-# Download and extract the installation folder
+Download and extract the installation folder
+```bash
 curl https://codeload.github.com/mateuscqueiros/dotfiles/tar.gz/master | \tar -xz --strip=2 dotfiles-master/install
+```
 
-# Give exec permission to folder and run the script
+Give exec permission to folder and run the script
+```bash
 chmod -R u+x ~/install-config && echo "0" | ./install.sh
+```
+
+Or, if you want to do it all in one line:
+```bash
+sudo apt update && sudo apt install -y tar curl && mkdir ~/install-config && cd ~/install-config && curl https://codeload.github.com/mateuscqueiros/dotfiles/tar.gz/master | tar -xz --strip=2 dotfiles-master/install && chmod -R u+x ~/install-config && echo "0" | ./install.sh
 ```
 
 After that, restart your machine. Open Neovim and let Lazy install the plugins. Once possible, open a file and let Mason install the LSPs (just leave it alone for about a minute). Set a colorscheme through `:colorscheme rose-pine`. After all downloads finish, quit Neovim and reopen it. You are done!
