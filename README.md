@@ -53,7 +53,6 @@ After that, restart your machine. Open Neovim and let Lazy install the plugins. 
 Generate a new SSH key and add it to [your Github account](https://github.com/settings/keys). Test the connection.
 ```bash
 ssh-keygen -t ed25519 -C "mateuscqueiros@gmail.com"
-sudo apt-get install xclip
 xclip -sel clip < ~/.ssh/id_ed25519.pub
 ssh -T git@github.com
 ssh-add ~/.ssh/id_ed25519
