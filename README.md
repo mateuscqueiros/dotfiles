@@ -50,16 +50,12 @@ After that, restart your machine. Open Neovim and let Lazy install the plugins. 
 
 ## SSH
 
-Generate a new SSH key, start the ssh-agent and add the key to the ssh-agent.
+Generate a new SSH key, start the ssh-agent and add the key to the ssh-agent. Copy the public key and add it to [your Github account](https://github.com/settings/keys). Test the connection.
 ```bash
-ssh-keygen -t ed25519 -C "mateuscqueiros@gmail.com" && eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_ed25519 && ssh-add -l
-```
-
-Copy the public key and add it to [your Github account](https://github.com/settings/keys). Test the connection.
-```bash
-cat ~/.ssh/id_ed25519.pub
-ssh-add ~/.ssh/id_ed25519
+ssh-keygen -t ed25519 -C "mateuscqueiros@gmail.com"
+xclip -sel clip < ~/.ssh/id_ed25519.pub
 ssh -T git@github.com
+ssh-add ~/.ssh/id_ed25519
 ```
 
 ## Step by step

@@ -24,6 +24,7 @@ printf "Installed git\n";
 
 sudo add-apt-repository universe;
 sudo apt -qq install libfuse2;
+sudo apt -qq install xclip;
 sudo apt -qq install zip;
 sudo apt -qq install unzip;
 
