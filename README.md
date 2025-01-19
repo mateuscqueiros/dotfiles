@@ -1,7 +1,5 @@
 # Mateus Queirós’s dotfiles
 
-**[BETA README DO NOT TRY TO INSTALL THROUGH THE STEPS BELOW]**
-
 ![react demo](./screenshots/react-demo.png)
 
 This is my configuration for a Neovim setup, mainly focused on React and Web development.
@@ -33,22 +31,16 @@ How to use:
 
 ```bash
 # Make sure you have tar and curl installed
-sudo apt update
-sudo apt install tar
-sudo apt install curl
+sudo apt update && sudo apt install tar curl
 
 # Create a installation directory
-mkdir ~/install-config
-cd ~/install-config
+mkdir ~/install-config && cd ~/install-config
 
 # Download and extract the installation folder
 curl https://codeload.github.com/mateuscqueiros/dotfiles/tar.gz/master | \tar -xz --strip=2 dotfiles-master/install
 
-# Give exec permission to folder
-chmod -R u+x ~/install-config
-
-# Run the script
- echo "0" | ./install.sh
+# Give exec permission to folder and run the script
+chmod -R u+x ~/install-config && echo "0" | ./install.sh
 ```
 
 After that, restart your machine. Open Neovim and let Lazy install the plugins. Once possible, open a file and let Mason install the LSPs (just leave it alone for about a minute). Set a colorscheme through `:colorscheme rose-pine`. After all downloads finish, quit Neovim and reopen it. You are done!
