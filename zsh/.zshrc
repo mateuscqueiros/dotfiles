@@ -19,7 +19,7 @@ plugins=(
   ssh-agent
 )
 
-zstyle :omz:plugins:ssh-agent identities id_rsa id_rsa2 id_github
+zstyle :omz:plugins:ssh-agent identities id_rsa id_rsa2 id_github id_ed25519
 zstyle :omz:plugins:ssh-agent quiet yes
 zstyle :omz:plugins:ssh-agent lazy yes
 
