@@ -32,7 +32,7 @@ fi
 printf "Installed git\n";
 
 sudo add-apt-repository universe;
-sudo apt -qq -y install libfuse2 xclip zip unzip nodejs;
+sudo apt -qq -y install libfuse2 xclip zip unzip;
 
 git clone --quiet https://github.com/mateuscqueiros/dotfiles ~/.config
 
