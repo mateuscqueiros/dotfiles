@@ -83,6 +83,9 @@ printf "Installed Neovim\n";
 
 git clone --quiet https://github.com/mateuscqueiros/nvim.config ~/.config/nvim;
 
+git config --global user.name "Mateus Queirós"
+git config --global user.email "mateuscqueiros@gmail.com"
+
 # Set default shell
 new_shell=$(which zsh);
 
