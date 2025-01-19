@@ -23,10 +23,7 @@ fi
 printf "Installed git\n";
 
 sudo add-apt-repository universe;
-sudo apt -qq install libfuse2;
-sudo apt-get install xclip;
-sudo apt -qq install zip;
-sudo apt -qq install unzip;
+sudo apt -qq install libfuse2 xclip zip unzip;
 
 git clone --quiet https://github.com/mateuscqueiros/dotfiles ~/.config
 
