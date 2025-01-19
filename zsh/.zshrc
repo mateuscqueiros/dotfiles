@@ -16,6 +16,7 @@ plugins=(
   git
   zsh-autosuggestions
   zsh-syntax-highlighting
+  zsh-autopair
   ssh-agent
 )
 
