@@ -19,6 +19,7 @@ plugins=(
   zsh-autopair
   zsh-askpass
   ssh-agent
+  z
 )
 
 zstyle :omz:plugins:ssh-agent identities id_rsa id_rsa2 id_github id_ed25519
